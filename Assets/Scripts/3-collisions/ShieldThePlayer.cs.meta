@@ -3,7 +3,11 @@ guid: 086f5bbcb4e8a0542aed0cf2ceddb974
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - shieldVisualParent: {fileID: 761240425446030449, guid: 69d39c8cb5d1bfc4d8c784978eade3ee,
+      type: 3}
+  - shieldPickupPrefab: {fileID: 5976893259067606641, guid: 288808bb6113f4e4682ec92b6b66ce21,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

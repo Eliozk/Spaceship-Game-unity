@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /**
+//CollisionLogger
  * This component logs all four kinds of collisions involving its object.
  */
 public class CollisionLogger : MonoBehaviour {
     private void Start() {
-        Debug.Log($"Start CollisionLogger on {this.name}"   );
+        Debug.Log($"Start CollisionLogger on object {this.name}"   );
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log($"{this.name} Trigger 2D with name={other.name} tag={other.tag}");
+        Debug.Log($"{this.name} object Trigger 2D with name={other.name} tag={other.tag}");
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {

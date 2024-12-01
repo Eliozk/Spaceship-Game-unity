@@ -2,21 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/**
- * This component destroys its object whenever it triggers a 2D collider with the given tag.
- */
-public class DestroyOnTrigger2D : MonoBehaviour {
+public class DestroyOnTrigger2D : MonoBehaviour
+{
     [Tooltip("Every object tagged with this tag will trigger the destruction of this object")]
-    [SerializeField] string triggeringTag;
+    [SerializeField] string triggeringTag; // תג שמייצג את החפצים שפוגעים בחללית (לדוגמה, Enemy)
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == triggeringTag && enabled) {
-            Destroy(this.gameObject);
-            Destroy(other.gameObject);
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Elioz: OnTriggerEnter2D activated with object: " + other.name);
+
+        // התעלמות מהתנגשות עם יריות החללית
+        if (other.name.Contains("Laser"))
+        {
+            Debug.Log("Elioz: Ignoring collision with object: " + other.name + " (Laser detected)");
+            return;
         }
-    }
+        
+        if (other.tag == triggeringTag && enabled)//אם פוגע בחללית אובייקט
+        {
+            Debug.Log("Elioz: Object with correct tag found: " + other.name + " Tag: " + other.tag);
 
-    private void Update() {
-        /* Just to show the enabled checkbox in Editor */
+            // קבלת קומפוננטת PlayerHealth של השחקן
+            PlayerHealth playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
+
+            if (playerHealth != null && !this.name.Contains("Laser"))
+            {
+                Debug.Log("Elioz: PlayerHealth component found on Player Spaceship, proceeding to TakeDamage");
+                playerHealth.TakeDamage(); // הורדת חיים
+            }
+            Debug.Log("Elioz: Destroying other object: " + other.gameObject.name);
+            Destroy(other.gameObject); // השמדת האובייקט המתנגש
+        }
+        else
+        {
+            Debug.Log("Elioz: Object " + other.name + " with tag " + other.tag + " did not match or script disabled.");
+        }
     }
 }

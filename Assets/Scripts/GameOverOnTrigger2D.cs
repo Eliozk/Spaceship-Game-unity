@@ -8,11 +8,18 @@ public class GameOverOnTrigger2D : MonoBehaviour
     [SerializeField] string triggeringTag;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == triggeringTag && enabled) {
-            Debug.Log("Game over!");
-            Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;  // Error on editor 2021.3
-        }
+        // Debug.Log("gameovercheck1");
+        // if (other.tag == triggeringTag && enabled) {
+        //             Debug.Log("gameovercheck2");
+
+        //  PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+        // if (playerHealth != null)
+        // {
+        //             Debug.Log("gameovercheck3");
+
+        //     playerHealth.TakeDamage(); // הפחתת חיים במקום לסיים את המשחק מיד
+        // }
+        // }
     }
 
     private void Update() {
