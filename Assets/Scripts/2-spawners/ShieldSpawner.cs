@@ -7,16 +7,16 @@ public class ShieldSpawner : MonoBehaviour
     [SerializeField] GameObject shieldItemPrefab; // Prefab של השיקוי
 
     [Tooltip("Time interval between spawns in seconds")]
-    [SerializeField] float spawnInterval = 10f; // מרווח בין הופעות
+    [SerializeField] float spawnInterval; // מרווח בין הופעות
 
     [Tooltip("Size of the spawn area (width x height)")]
     [SerializeField] Vector2 spawnAreaSize = new Vector2(10f, 5f); // שטח ההופעה
 
     [Tooltip("Duration for which the shield item stays active")]
-    [SerializeField] float shieldDuration = 4f; // משך זמן הופעת השיקוי
+    [SerializeField] float shieldDuration; // משך זמן הופעת השיקוי
 
     [Tooltip("Delay before the first spawn")]
-    [SerializeField] float initialSpawnDelay = 4f; // עיכוב לפני הופעת השיקוי הראשון
+    [SerializeField] float initialSpawnDelay; // עיכוב לפני הופעת השיקוי הראשון
 
     private GameObject currentShieldInstance; // שמירה על השיקוי שנוצר כרגע
 
