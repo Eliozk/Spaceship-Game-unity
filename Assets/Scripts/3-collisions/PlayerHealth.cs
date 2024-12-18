@@ -31,18 +31,18 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void AddHealth(int amount)
-{
-    currentLives += amount;
-
-    // וידוא שלא עולים מעבר למקסימום חיים
-    if (currentLives > maxLives)
     {
-        currentLives = maxLives;
-    }
+        currentLives += amount;
 
-    UpdateHearts(); // עדכון התצוגה של הלבבות
-    Debug.Log("Health added! Current lives: " + currentLives);
-}
+        // וידוא שלא עולים מעבר למקסימום חיים
+        if (currentLives > maxLives)
+        {
+            currentLives = maxLives;
+        }
+
+        UpdateHearts(); // עדכון התצוגה של הלבבות
+        Debug.Log("Health added! Current lives: " + currentLives);
+    }
 
 
     void UpdateHearts()
