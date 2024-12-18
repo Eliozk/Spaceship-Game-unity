@@ -5,10 +5,14 @@ public class HealthPickup : MonoBehaviour
 {
     [Tooltip("The amount of health to restore")]
 <<<<<<< HEAD
+<<<<<<< HEAD
     [SerializeField] int healthToRestore;
 =======
     [SerializeField] int healthToRestore = 1;
 >>>>>>> b59e0ec (Fix formatting issues with dotnet-format)
+=======
+    [SerializeField] int healthToRestore = 1;
+>>>>>>> b59e0ece643a0c80c02e7c8247bf7e7aad40870a
 
     private void OnTriggerEnter2D(Collider2D other)
     {
