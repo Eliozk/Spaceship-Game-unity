@@ -38,7 +38,7 @@ public class ShieldThePlayer : MonoBehaviour
         Debug.Log("Shield activated!");
 
         await Task.Delay((int)(durationShieldActive * 1000)); // המתנה למשך זמן המגן
-        
+
         destroyComponent.enabled = true; // החזרת אפשרות הפגיעה בשחקן
         Debug.Log("Shield deactivated.");
     }

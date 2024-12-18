@@ -4,7 +4,11 @@ using UnityEngine.UI;
 public class HealthPickup : MonoBehaviour
 {
     [Tooltip("The amount of health to restore")]
+<<<<<<< HEAD
      [SerializeField] int healthToRestore;
+=======
+    [SerializeField] int healthToRestore = 1;
+>>>>>>> b59e0ec (Fix formatting issues with dotnet-format)
 
     private void OnTriggerEnter2D(Collider2D other)
     {

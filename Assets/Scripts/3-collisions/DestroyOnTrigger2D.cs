@@ -17,7 +17,7 @@ public class DestroyOnTrigger2D : MonoBehaviour
             Debug.Log("Elioz: Ignoring collision with object: " + other.name + " (Laser detected)");
             return;
         }
-        
+
         if (other.tag == triggeringTag && enabled)//אם פוגע בחללית אובייקט
         {
             Debug.Log("Elioz: Object with correct tag found: " + other.name + " Tag: " + other.tag);

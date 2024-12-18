@@ -7,7 +7,7 @@ public class HealthSpawner : MonoBehaviour
 
     [Tooltip("Time in seconds between spawns")]
     [SerializeField] float spawnInterval = 5f; // זמן בין הופעה להופעה
-    
+
     [Tooltip("The area where health pickups can spawn")]
     [SerializeField] Vector2 spawnAreaSize = new Vector2(17, 8);
 
