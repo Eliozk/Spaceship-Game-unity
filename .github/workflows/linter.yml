@@ -16,7 +16,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '7.x'  # Adjust to the required .NET version for Unity
+          dotnet-version: '9.0.x'  # Adjust to the required .NET version for Unity
 
       - name: Install dotnet-format
         run: dotnet tool install -g dotnet-format
