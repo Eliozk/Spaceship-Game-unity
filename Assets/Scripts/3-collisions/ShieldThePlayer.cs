@@ -48,7 +48,7 @@ public class ShieldThePlayer : MonoBehaviour
     {
         Vector3 spawnPosition = new Vector3(
             Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2),
-            Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2),0f);
+            Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2), 0f);
         Instantiate(shieldPickupPrefab, spawnPosition, Quaternion.identity);
         Debug.Log($"Shield spawned at position: {spawnPosition}");
     }
