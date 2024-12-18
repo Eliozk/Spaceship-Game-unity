@@ -1,0 +1,107 @@
+[1mdiff --git a/Assets/Scripts/3-collisions/HealthPickup.cs b/Assets/Scripts/3-collisions/HealthPickup.cs[m
+[1mindex 81e4a10..d4f8545 100644[m
+[1m--- a/Assets/Scripts/3-collisions/HealthPickup.cs[m
+[1m+++ b/Assets/Scripts/3-collisions/HealthPickup.cs[m
+[36m@@ -5,7 +5,7 @@[m [mpublic class HealthPickup : MonoBehaviour[m
+ {[m
+     [Tooltip("The amount of health to restore")][m
+ <<<<<<< HEAD[m
+[31m-     [SerializeField] int healthToRestore;[m
+[32m+[m[32m    [SerializeField] int healthToRestore;[m
+ =======[m
+     [SerializeField] int healthToRestore = 1;[m
+ >>>>>>> b59e0ec (Fix formatting issues with dotnet-format)[m
+[1mdiff --git a/Assets/Scripts/3-collisions/PlayerHealth.cs b/Assets/Scripts/3-collisions/PlayerHealth.cs[m
+[1mindex a0292e7..297e8ae 100644[m
+[1m--- a/Assets/Scripts/3-collisions/PlayerHealth.cs[m
+[1m+++ b/Assets/Scripts/3-collisions/PlayerHealth.cs[m
+[36m@@ -5,7 +5,7 @@[m
+ using UnityEngine.UI; // דרוש לעבודה עם UI[m
+ public class PlayerHealth : MonoBehaviour[m
+ {[m
+[31m-    public int maxLives = 3; // מספר החיים המקסימלי[m
+[32m+[m[32m    public int maxLives;[m
+     public int currentLives;[m
+ [m
+     public Image[] hearts; // מערך של תמונות הלבבות[m
+[1mdiff --git a/Assets/Scripts/3-collisions/ShieldThePlayer.cs b/Assets/Scripts/3-collisions/ShieldThePlayer.cs[m
+[1mindex 7bc65d9..f155278 100644[m
+[1m--- a/Assets/Scripts/3-collisions/ShieldThePlayer.cs[m
+[1m+++ b/Assets/Scripts/3-collisions/ShieldThePlayer.cs[m
+[36m@@ -4,7 +4,7 @@[m
+ public class ShieldThePlayer : MonoBehaviour[m
+ {[m
+     [Tooltip("The number of seconds that the shield remains active")][m
+[31m-    [SerializeField] float durationShieldActive = 5f;[m
+[32m+[m[32m    [SerializeField] float durationShieldActive;[m
+ [m
+     [Tooltip("Prefab of the shield pickup")][m
+     [SerializeField] GameObject shieldPickupPrefab;[m
+[36m@@ -48,9 +48,7 @@[m [mpublic void SpawnShield()[m
+     {[m
+         Vector3 spawnPosition = new Vector3([m
+             Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2),[m
+[31m-            Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2),[m
+[31m-            0f[m
+[31m-        );[m
+[32m+[m[32m            Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2),0f);[m
+         Instantiate(shieldPickupPrefab, spawnPosition, Quaternion.identity);[m
+         Debug.Log($"Shield spawned at position: {spawnPosition}");[m
+     }[m
+[1mdiff --git a/Assets/Scripts/GameOverOnTrigger2D.cs b/Assets/Scripts/GameOverOnTrigger2D.cs[m
+[1mdeleted file mode 100644[m
+[1mindex 4bb668d..0000000[m
+[1m--- a/Assets/Scripts/GameOverOnTrigger2D.cs[m
+[1m+++ /dev/null[m
+[36m@@ -1,31 +0,0 @@[m
+[31m-using System.Collections;[m
+[31m-using System.Collections.Generic;[m
+[31m-using UnityEngine;[m
+[31m-[m
+[31m-public class GameOverOnTrigger2D : MonoBehaviour[m
+[31m-{[m
+[31m-    [Tooltip("Every object tagged with this tag will trigger game over")][m
+[31m-    [SerializeField] string triggeringTag;[m
+[31m-[m
+[31m-    private void OnTriggerEnter2D(Collider2D other)[m
+[31m-    {[m
+[31m-        // Debug.Log("gameovercheck1");[m
+[31m-        // if (other.tag == triggeringTag && enabled) {[m
+[31m-        //             Debug.Log("gameovercheck2");[m
+[31m-[m
+[31m-        //  PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();[m
+[31m-        // if (playerHealth != null)[m
+[31m-        // {[m
+[31m-        //             Debug.Log("gameovercheck3");[m
+[31m-[m
+[31m-        //     playerHealth.TakeDamage(); // הפחתת חיים במקום לסיים את המשחק מיד[m
+[31m-        // }[m
+[31m-        // }[m
+[31m-    }[m
+[31m-[m
+[31m-    private void Update()[m
+[31m-    {[m
+[31m-        /* Just to show the enabled checkbox in Editor */[m
+[31m-    }[m
+[31m-[m
+[31m-}[m
+[1mdiff --git a/Assets/Scripts/obj/Debug/net9.0/FixScripts.AssemblyInfo.cs b/Assets/Scripts/obj/Debug/net9.0/FixScripts.AssemblyInfo.cs[m
+[1mindex dd2e769..19e7708 100644[m
+[1m--- a/Assets/Scripts/obj/Debug/net9.0/FixScripts.AssemblyInfo.cs[m
+[1m+++ b/Assets/Scripts/obj/Debug/net9.0/FixScripts.AssemblyInfo.cs[m
+[36m@@ -13,7 +13,7 @@[m
+ [assembly: System.Reflection.AssemblyCompanyAttribute("FixScripts")][m
+ [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")][m
+ [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")][m
+[31m-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e46cf100a4468883844f9452541a3eed667ac1f1")][m
+[32m+[m[32m[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+454f07410e1b12dd10c84523075f03df1b919da8")][m
+ [assembly: System.Reflection.AssemblyProductAttribute("FixScripts")][m
+ [assembly: System.Reflection.AssemblyTitleAttribute("FixScripts")][m
+ [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")][m
+[1mdiff --git a/Assets/Scripts/obj/Debug/net9.0/FixScripts.AssemblyInfoInputs.cache b/Assets/Scripts/obj/Debug/net9.0/FixScripts.AssemblyInfoInputs.cache[m
+[1mindex 8f99d2f..d6be86a 100644[m
+[1m--- a/Assets/Scripts/obj/Debug/net9.0/FixScripts.AssemblyInfoInputs.cache[m
+[1m+++ b/Assets/Scripts/obj/Debug/net9.0/FixScripts.AssemblyInfoInputs.cache[m
+[36m@@ -1 +1 @@[m
+[31m-399ec7419421dd29823643eb83fbc1bd23a2c8e2cc054926bd7ad31ef9be9222[m
+[32m+[m[32m2e4f1c662b3c1078437e6c65c3cb761ea942815e3352042857a7dbab0fb6d734[m
