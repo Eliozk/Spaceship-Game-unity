@@ -148,6 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   durationShieldActive: 5
-  shieldVisualParent: {fileID: 0}
   shieldPickupPrefab: {fileID: 0}
   spawnAreaSize: {x: 0, y: 0}
+  Shield: {fileID: 0}

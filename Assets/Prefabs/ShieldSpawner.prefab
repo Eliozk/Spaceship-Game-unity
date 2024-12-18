@@ -148,9 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766213223a886274c929b4a878c7435e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldItemPrefab: {fileID: 5976893259067606641, guid: 288808bb6113f4e4682ec92b6b66ce21,
-    type: 3}
-  spawnInterval: 10
+  shieldItemPrefab: {fileID: 7514351465765654347}
+  spawnInterval: 3
   spawnAreaSize: {x: 17, y: 9}
 --- !u!114 &7299277655282057335
 MonoBehaviour:
@@ -165,5 +164,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   durationShieldActive: 5
-  shieldEffectPrefab: {fileID: 761240425446030449, guid: 69d39c8cb5d1bfc4d8c784978eade3ee,
+  shieldEffectPrefab: {fileID: 4993273481701135455, guid: 615b1367d6384fc41aeee3819eb4c7ab,
     type: 3}
