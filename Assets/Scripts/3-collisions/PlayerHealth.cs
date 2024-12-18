@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI; // דרוש לעבודה עם UI
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxLives = 3; // מספר החיים המקסימלי
+    public int maxLives;
     public int currentLives;
 
     public Image[] hearts; // מערך של תמונות הלבבות
