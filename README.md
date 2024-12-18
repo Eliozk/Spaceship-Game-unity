@@ -11,6 +11,7 @@
 
 הסברים טקסטואליים זמינים 
 [כאן](https://github.com/gamedev-at-ariel/gamedev-5782) בתיקייה 04.
+
 לכניסה למשחק תצוגה בסיסי: [Spaceship Game on Itch.io](https://kolanieliozgmailcom.itch.io/spaceship-game)
 
 
